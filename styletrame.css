@@ -1,0 +1,18 @@
+body {
+ background-color : gold;
+ 
+ }
+ p {
+ color : RGB(100, 140, 218);	 
+ }
+ /* Style du bouton */
+button {
+  background-color:#FFD700; /* Couleur de fond du bouton */
+  color: black; /* Couleur du texte */
+}
+
+/* Style du lien à l'intérieur du bouton */
+button a {
+  color: black; /* Couleur du texte du lien */
+  text-decoration: none; /* Enlever le soulignement du lien */
+}

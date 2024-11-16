@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+        <meta charset="utf-8"/>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<link rel="icon" href="icone.ico" type="">
+    <style>
+        h1 { text-align: center; }
+        #countdown { 
+            font-size: 20px; 
+            text-align: center; 
+            margin-top: 40px; 
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div style="background-color: #444; color: #FFD700; padding: 10px 20px;">
+      <h1>Le Tour de France 2025 - Caen</h1>
+        <nav>
+			<a href="Parcours 2025.html" style="color: white; text-decoration: none;">Parcours Caen</a><a>   -     </a>
+			
+		   <a href="page3_2024.html" style="color: white; text-decoration: none; margin-right: 15px;">   Page 3</a>
+        </nav>
+    </div>
+</header>
+    <p id="countdown">Début du contre-la-montre dans : </p>
+ <h2>C'est officiel !</h2><br><h3>Le Tour de France fera étape à Caen pour une épreuve de contre-la-montre le 9 juillet 2025.<br>Un rendez-vous exceptionnel qui s'inscrit dans le Millénaire de la ville.</h3></p>
+    <script>
+        // Date de l'événement
+        const eventDate = new Date("July 9, 2025 11:30:00").getTime();
+
+        // Mettre à jour le compte à rebours chaque seconde
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+
+            // Calcul des jours, heures, minutes et secondes restants
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            // Afficher le résultat
+            document.getElementById("countdown").innerHTML = 
+                `Début du contre-la-montre dans : ${days} jours, ${hours} heures, ${minutes} minutes, ${seconds} secondes`;
+
+            // Arrêter le compte à rebours lorsque la date est atteinte
+            if (timeLeft < 0) {
+                clearInterval(countdown);
+                document.getElementById("countdown").innerHTML = "Le contre-la-montre a commencé !";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+
+<img src="logo caen.jpg" alt="logo-caen" style="width:150px; height:76px; position: absolute; top: 0; left: 0;">
+
+  <img src="https://pngimg.com/uploads/tour_de_france/tour_de_france_PNG8.png" alt="TDF drapeau" style="width:150px; height:112x; position: absolute; top: 0; right: 0;">
+		<link rel="stylesheet" href="styletrame.css">
+    </head>
+
+	<body>
+	<p> 
+<br><iframe width="560" height="315" src="https://www.youtube.com/embed/XMkiQFpFBlA?si=vqBRuKYxVBmTgLR0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<br> <button><a href="Parcours 2025.html" > Page 2 - Parcours Caen </a></button> <button><a href="page3_2024.html" > Page 3 </a></button>
+<footer>
+<p style="color: black;"> © 2025 Caen</p>
+
+  </footer>
+  </body>
+</html>
